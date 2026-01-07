@@ -25,7 +25,8 @@ This project demonstrates an end-to-end NLP system combining text classification
   - Streamlit frontend
   - Single text input → classification + extracted entities
 
-Project Structure
+## Project Structure
+```
 03_document_intelligence/
 │
 ├── notebooks/               # Training notebooks (Colab)
@@ -44,37 +45,38 @@ Project Structure
 │
 ├── requirements.txt
 └── README.md
+```
 
 ## How to Run Locally
-```
 1. Setup environment
+   
+```
 python -m venv .venv
 # activate venv
 pip install -r requirements.txt
 ```
 
 2. Start API
+```
 uvicorn api.main:app --reload
-
+```
 
 API will be available at:
 
 http://127.0.0.1:8000
-
 Swagger UI: http://127.0.0.1:8000/docs
 
 3. Start Streamlit UI
+```
 python -m streamlit run app/streamlit_app.py
-
+```
 
 UI will open at:
 
 http://localhost:8501
 
-Notes
+## Notes
 
-Models are trained in Google Colab and loaded locally for inference.
-
-Inference runs on CPU (GPU optional).
-
-Model artifacts are intentionally excluded from Git history.
+ - Models are trained in Google Colab and loaded locally for inference.
+ - Inference runs on CPU (GPU optional).
+ - Model artifacts are intentionally excluded from Git history.
